@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Fleet App - Login</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="brand">Fleet Management App</header>
+    <main class="center">
+      <form id="loginForm" class="card">
+        <h2>Admin Login</h2>
+        <label>Email<input type="email" id="email" required></label>
+        <label>Password<input type="password" id="password" required></label>
+        <button type="submit" class="btn">Login</button>
+      </form>
+    </main>
+    <script>
+      document.getElementById('loginForm').addEventListener('submit', function(e){
+        e.preventDefault();
+        const email = document.getElementById('email').value.trim();
+        const pass = document.getElementById('password').value.trim();
+        if(email === 'admin@gmail.com' && pass === 'admin1234'){
+          alert('Login success');
+          window.location = 'admin.html';
+        } 
+        else {
+          alert('Wrong email or password');
+        }
+      });
+    </script>
+  </body>
+</html>

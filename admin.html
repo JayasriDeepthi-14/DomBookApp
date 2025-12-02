@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>DomBookApp - Admin</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+
+      <header class="space-between">
+        <h1>Book Management</h1>
+        <div>
+          <a class="btn small" href="index.html">Home</a>
+        </div>
+      </header>
+
+      <section class="card add-form">
+        <h2>Add Book</h2>
+        <form id="bookForm">
+          <div class="form-row">
+            <label for="title">Title</label>
+            <input id="title" name="title" required />
+          </div>
+          <div class="form-row">
+            <label for="author">Author</label>
+            <input id="author" name="author" required />
+          </div>
+          <div class="form-row">
+            <label for="category">Category</label>
+            <select id="category" name="category">
+              <option value="Fiction">Fiction</option>
+              <option value="Comedy">Comedy</option>
+              <option value="Technical">Technical</option>
+            </select>
+          </div>
+          <div class="form-row actions">
+            <button type="submit" class="btn">Add Book</button>
+            <button type="button" id="clearAll" class="btn ghost">Clear All</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="controls">
+        <div class="control-item">
+          <button id="sortBtn" class="btn small">Sort A → Z</button>
+        </div>
+        <div class="control-item">
+          <label for="filter">Filter by Category</label>
+          <select id="filter">
+            <option value="All">All</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Technical">Technical</option>
+          </select>
+        </div>
+      </section>
+
+      <section>
+        <h2>Books</h2>
+        <div id="booksGrid" class="grid"></div>
+      </section>
+
+      <footer>
+        <small>Use the form above to add books. Click delete on a card to remove it.</small>
+      </footer>
+
+    </main>
+    <script src="app.js"></script> 
+
+  </body>
+</html>
